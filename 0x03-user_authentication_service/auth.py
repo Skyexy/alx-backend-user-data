@@ -67,7 +67,7 @@ class Auth:
         """
         try:
             user = self._db.find_user_by(email=email)
-            idnum = self._generate_uuid()
+            idnum = _generate_uuid()
             self._db.update_user(user.id, session_id=idnum)
             return user.session_id
         except Exception:
