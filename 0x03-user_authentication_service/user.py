@@ -1,5 +1,7 @@
 #!/usr/bin/env python3
-""" User module
+"""
+creation of model named User for a database table named users
+using the mapping declaration of SQLAlchemy
 """
 
 from sqlalchemy.ext.declarative import declarative_base
@@ -12,7 +14,6 @@ class User(Base):
     """
     User class.
     """
-
     __tablename__ = 'users'
 
     id = Column(Integer, primary_key=True)
